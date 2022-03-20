@@ -1,4 +1,6 @@
-﻿@page "/"
+﻿@using qengyWeb.Data
+@page "/"
+@inject HttpClient Http
 
 <PageTitle>qengy - .NET libraries and apps</PageTitle>
 
@@ -30,3 +32,45 @@
         </MudItem>
     </MudGrid>
 </MudContainer>
+
+<MudContainer Class="py-5 px-5 mud-secondary">
+    <MudSimpleTable Hover="true" Dense="true" Bordered="true">
+        <thead>
+            <tr>
+                @foreach (var h in headings)
+                {
+                    <th>@h</th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var rep in reps)
+            {
+                <tr>
+                    <td>@rep.Repo</td>
+                    <td>@rep.Description</td>
+                    <td><MudLink Href="@rep.GIT">@rep.GIT</MudLink></td>
+                    <td><MudLink Href="@rep.Demo">@rep.Demo</MudLink></td>
+                </tr>
+            }
+        </tbody>
+    </MudSimpleTable>
+</MudContainer>
+
+<div Class="py-10 px-5 mud-theme-primary">
+    <MudImage Src="imgs/logo-mono.png" Width="50"></MudImage>
+    <MudText Color="Color.Dark"><b>admin@qengy.com</b></MudText>
+    <MudText Color="Color.Dark">Copyright © 2022 qengy.</MudText>
+</div>
+
+@code {
+
+    private Repository[]? reps = new Repository[0];
+    private string[] headings = { "Repository", "Description", "GIT", "Demo" };
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        reps = await Http.GetFromJsonAsync<Repository[]>("data/repositories.json");
+    }
+}
