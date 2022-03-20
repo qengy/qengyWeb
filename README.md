@@ -1,4 +1,4 @@
-# ![qengy](wwwroot/imgs/biglogo.png)
+# ![qengy](qengyWeb/wwwroot/imgs/biglogo.png)
 
 # qengyWeb
 
