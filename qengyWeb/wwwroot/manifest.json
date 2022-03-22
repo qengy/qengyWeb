@@ -1,9 +1,9 @@
 {
-  "name": "qengy",
-  "short_name": "qengy",
+  "name": "qengy Web",
+  "short_name": "qengy Web",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "#FFC000",
   "theme_color": "#FFC000",
   "prefer_related_applications": false,
   "icons": [

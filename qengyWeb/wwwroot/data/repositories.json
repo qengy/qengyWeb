@@ -1,8 +1,14 @@
 [
   {
     "repo": "qengyWeb",
-    "description": "qengy SPA",
+    "description": "qengy SPA - .NET libraries and apps",
     "git": "https://github.com/qengy/qengyWeb",
     "demo": "https://qengy.com/"
+  },
+  {
+    "repo": "qengyValidator",
+    "description": "qengy Validator - Project with classes that facilitate the validation of certain functions",
+    "git": "https://github.com/qengy/qengyValidator",
+    "demo": "https://validator.qengy.com/"
   }
 ]

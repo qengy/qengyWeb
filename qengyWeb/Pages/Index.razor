@@ -47,9 +47,8 @@
             @foreach (var rep in reps)
             {
                 <tr>
-                    <td>@rep.Repo</td>
+                    <td><MudLink Href="@rep.GIT">@rep.Repo</MudLink></td>
                     <td>@rep.Description</td>
-                    <td><MudLink Href="@rep.GIT">@rep.GIT</MudLink></td>
                     <td><MudLink Href="@rep.Demo">@rep.Demo</MudLink></td>
                 </tr>
             }
@@ -66,7 +65,7 @@
 @code {
 
     private Repository[]? reps = new Repository[0];
-    private string[] headings = { "Repository", "Description", "GIT", "Demo" };
+    private string[] headings = { "Repository", "Description", "Demo" };
 
 
     protected override async Task OnInitializedAsync()
