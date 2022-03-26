@@ -10,5 +10,11 @@
     "description": "qengy Validator - Project with classes that facilitate the validation of certain functions",
     "git": "https://github.com/qengy/qengyValidator",
     "demo": "https://validator.qengy.com/"
+  },
+  {
+    "repo": "qengySQLite",
+    "description": "qengy SQLite - Project with classes that show how to use SQLite in Blazor WebAssembly",
+    "git": "https://github.com/qengy/qengySQLite",
+    "demo": ""
   }
 ]
