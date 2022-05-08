@@ -16,5 +16,11 @@
     "description": "qengy SQLite - Project with classes that show how to use SQLite in Blazor WebAssembly",
     "git": "https://github.com/qengy/qengySQLite",
     "demo": ""
+  },
+  {
+    "repo": "qengyMAUI",
+    "description": "qengy MAUI - Project to view new MAUI Essential",
+    "git": "https://github.com/qengy/qengyMAUI",
+    "demo": ""
   }
 ]
